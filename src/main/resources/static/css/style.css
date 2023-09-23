@@ -1,0 +1,19 @@
+body{
+    margin: 0;    
+}
+.welcome_header{
+    background-color: rgb(34, 72, 119);
+    color: white;
+    text-align: center;
+}
+header h1{
+    margin: 0 ;
+    display: inline;
+}
+
+#logo{
+    max-width: 4%;
+    height:auto ;
+    padding-left: 20px;
+    padding-top: 20px;
+}
