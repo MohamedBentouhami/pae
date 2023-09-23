@@ -33,10 +33,16 @@
     <div class="secondChild">
 
         <h2 class="title">Ajouter un cours</h2>
-        <form th:action="@{/addCourse}" th:object="${course}" method="post">
-            Sigle : <input type="text" th:field="*{id}"><br>
-            Titre : <input type="text" th:field="*{title}"><br>
-            ECTS : <input type="number" th:field="*{credits}"><br>
+        <form th:action="@{/courses/add}" th:object="${course}" method="post">
+            Sigle : <input type="text" th:field="*{id}" th:errorclass="errorField" placeholder="Entrez le sigle du cours...">
+            <span th:errors="*{id}" class="errorMsg">erreur</span><br>
+
+            Titre : <input type="text" th:field="*{title}" th:errorclass="errorField" placeholder="Entrez le titre du cours...">
+            <span th:errors="*{title}" class="errorMsg">erreur</span><br>
+            
+            ECTS : <input type="number" th:field="*{credits}" th:errorclass="errorField">
+            <span th:errors="*{credits}" class="errorMsg">erreur</span>
+            <br>
             <button type="submit">Ajouter</button>
         </form>
     </div>

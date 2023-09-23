@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <header class="welcome_header">
         <h1>Programme annuel des étudiants</h1><span><img id="logo" th:src="@{/images/logo-esi.jpg}"></span>
         <h3>HE2B-ESI/ WEBG5/ 2023-2024</h3>
     </header>
+    <nav class="menu">
+        <a class="material-symbols-outlined" th:href="@{/}">
+            home
+        </a>
+        <a th:href="@{/courses}">Cours</a>
+        <a>Étudiants</a>
+    </nav>
     <main layout:fragment="content">
 
     </main>
